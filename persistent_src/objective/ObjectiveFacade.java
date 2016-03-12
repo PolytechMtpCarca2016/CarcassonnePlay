@@ -26,13 +26,13 @@ public class ObjectiveFacade {
 
 	// GETTERS : 
 
-	public PositionGPS getLieu (Objective objective) {
-		return objective.Lieu;
+	public Lieu getLieu (Objective objective) {
+		return objective.lieu;
 	}
 	public String getTitle (Objective objective) {
-		return objective.Title;
+		return objective.titre;
 	}
 	public String getTheme (Objective objective) {
-		return objective.Theme;
+		return objective.theme;
 	}
 }

@@ -6,7 +6,10 @@ public abstract class Objective {
 	protected String theme;
 	protected MiniGame miniJeu;
 	protected HistoricalInfos historicalInfos;
+	protected boolean completed;
 	 
+	public abstract boolean isOver ();
+	
 	// SETTERS :
 	
 	public abstract Objective setTitre (String nTitre);
@@ -15,6 +18,10 @@ public abstract class Objective {
 	
 	public abstract Objective setTheme (String nTheme);
 
+	public abstract Objective setMiniGame (MiniGame miniJeu);
+	
+	public abstract Objective setHistoricalInfos (HistoricalInfos historicalInfos);
+	
 	// GETTERS : 
 
 	public abstract Lieu getLieu ();

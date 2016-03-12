@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">CarcassonnePlay</string>
-    <string name="info">Info</string>
+    <string name="title_activity_main_activity">Map</string>
 </resources>

@@ -4,7 +4,12 @@ public class BrutHistoricalInfo extends HistoricalInfo {
 	public BrutHistoricalInfo(String title) {
 		this.title = title;
 		switch(title) {
-		// TODO générer les infos historiques en fonctions du titre
+		case "eglise":this.infos = "poulet";
+			break;
+		case "chateau" : this.infos = "coq";
+			break;
+		case "rempart" : this.infos = "canard";
+			break;
 		default:
 			break;
 		}

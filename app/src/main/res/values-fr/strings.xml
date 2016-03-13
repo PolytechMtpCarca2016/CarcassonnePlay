@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CarcassonnePlay</string>
+    <string name="add_geofences">Ajouter une localisation</string>
+    <string name="enigme">Enigme</string>
+    <string name="geofence_not_available">Service de localisation non disponible</string>
+    <string name="geofence_transition_entered">Entré</string>
+    <string name="geofence_transition_exited">Sorti</string>
+    <string name="geofence_transition_invalid_type"></string>
+    <string name="geofences_added">Localisation ajoutée</string>
+    <string name="geofences_removed">Localisation supprimée</string>
+    <string name="historical">Historique</string>
+</resources>

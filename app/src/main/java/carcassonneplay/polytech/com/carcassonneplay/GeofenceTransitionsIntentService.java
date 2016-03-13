@@ -78,8 +78,7 @@ public class GeofenceTransitionsIntentService extends IntentService {
         int geofenceTransition = geofencingEvent.getGeofenceTransition();
 
         // Test that the reported transition was of interest.
-        if (geofenceTransition == Geofence.GEOFENCE_TRANSITION_ENTER ||
-                geofenceTransition == Geofence.GEOFENCE_TRANSITION_EXIT) {
+        if (geofenceTransition == Geofence.GEOFENCE_TRANSITION_ENTER) {
 
             // Get the geofences that were triggered. A single event can trigger multiple geofences.
             List<Geofence> triggeringGeofences = geofencingEvent.getTriggeringGeofences();
@@ -93,8 +92,8 @@ public class GeofenceTransitionsIntentService extends IntentService {
 
             Vibrator vib = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
 
-            // Vibrate for 300 milliseconds
-            vib.vibrate(300);
+            // Vibrate for 3000 milliseconds
+            vib.vibrate(3000);
 
             // Send notification and log the transition details.
             sendNotification(geofenceTransitionDetails);

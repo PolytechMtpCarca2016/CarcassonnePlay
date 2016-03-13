@@ -9,7 +9,7 @@
         android:id="@+id/imageView4"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:background="@drawable/Intro3"/>
+        android:background="@drawable/intro3"/>
     <Button
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"

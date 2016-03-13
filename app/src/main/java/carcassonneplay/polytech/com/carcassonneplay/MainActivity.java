@@ -27,7 +27,11 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.GroundOverlay;
+import com.google.android.gms.maps.model.GroundOverlayOptions;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.util.ArrayList;
@@ -51,6 +55,9 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, ResultCallback<Status> {
 
     private GoogleMap mMap;
+
+    protected static boolean intro = false;
+
     protected static final String TAG = "MainActivity";
 
     /**
@@ -120,19 +127,32 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         mMap = googleMap;
         mMap.getUiSettings().setMapToolbarEnabled(false);
         mMap.getUiSettings().setCompassEnabled(true);
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(43.2065, 2.36309051), 16));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(43.2065, 2.3640), 17));
+
+        LatLngBounds mapBounds = new LatLngBounds(
+                new LatLng(43.20356562601411, 2.361022842050147),       // South west corner
+                new LatLng(43.20959495499316, 2.367116820931983));      // North east corner
+        GroundOverlayOptions mapCarca = new GroundOverlayOptions()
+                .image(BitmapDescriptorFactory.fromResource(R.drawable.mapcarca))
+                .positionFromBounds(mapBounds);
+        GroundOverlay imageOverlay = mMap.addGroundOverlay(mapCarca);
 
         // Add a marker in the castle and move the camera
         LatLng castle = new LatLng(43.2072481,2.36309051);
-        mMap.addMarker(new MarkerOptions().position(castle).title("Chateau Comtal"));
+        mMap.addMarker(new MarkerOptions().position(castle).title("Chateau Comtal")
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.chateau)));
         LatLng basilique = new LatLng(43.20538,2.36263);
-        mMap.addMarker(new MarkerOptions().position(basilique).title("Basilique St Nazaire"));
+        mMap.addMarker(new MarkerOptions().position(basilique).title("Basilique St Nazaire")
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.parchemin)));
         LatLng porte = new LatLng(43.20676,2.36567);
-        mMap.addMarker(new MarkerOptions().position(porte).title("Porte Narbonnaise"));
+        mMap.addMarker(new MarkerOptions().position(porte).title("Porte Narbonnaise")
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.epee)));
         LatLng place = new LatLng(43.20657,2.36483);
-        mMap.addMarker(new MarkerOptions().position(place).title("Place Marcou"));
+        mMap.addMarker(new MarkerOptions().position(place).title("Place Marcou")
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.casque)));
         LatLng puits = new LatLng(43.20744,2.36424);
-        mMap.addMarker(new MarkerOptions().position(puits).title("Grand Puits"));
+        mMap.addMarker(new MarkerOptions().position(puits).title("Grand Puits")
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.key)));
     }
 
     /**
@@ -150,6 +170,11 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     protected void onStart() {
         super.onStart();
         mGoogleApiClient.connect();
+        if(intro==false){
+            Intent intent = new Intent(this,intro.class);
+            startActivity(intent);
+            intro = true;
+        }
     }
 
     @Override

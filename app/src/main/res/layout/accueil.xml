@@ -6,10 +6,11 @@
     <ImageView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
+        android:text="Saisie ton nom"
         android:id="@+id/imageView2"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:background="@drawable/Intro1"/>
+        android:background="@drawable/intro"/>
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -20,5 +21,16 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="30dp"
-        android:layout_marginBottom="120dp" />
+        android:layout_marginBottom="140dp" />
+
+    <EditText
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText2"
+        android:layout_alignBottom="@+id/button2"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="80dp"
+        android:background="#ffffff"
+        android:editable="true" />
+
 </RelativeLayout>

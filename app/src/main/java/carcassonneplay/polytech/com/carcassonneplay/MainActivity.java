@@ -171,7 +171,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         super.onStart();
         mGoogleApiClient.connect();
         if(intro==false){
-            Intent intent = new Intent(this,intro.class);
+            Intent intent = new Intent(this,Intro.class);
             startActivity(intent);
             intro = true;
         }

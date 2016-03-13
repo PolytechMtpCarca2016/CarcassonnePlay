@@ -44,24 +44,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".intro"
+            android:name=".Intro"
             android:label="@string/intro">
         </activity>
         <activity
-            android:name=".intro2"
+            android:name=".Intro2"
             android:label="@string/intro2">
         </activity>
         <activity
-            android:name=".intro3"
+            android:name=".Intro3"
             android:label="@string/intro3">
-        </activity>
-        <activity
-            android:name=".menu_enigme"
-            android:label="@string/menu_enigme">
-        </activity>
-        <activity
-            android:name=".menu_quete"
-            android:label="@string/menu_quete">
         </activity>
         <service android:name=".GeofenceTransitionsIntentService"/>
     </application>

@@ -9,7 +9,7 @@ import android.widget.Button;
 /**
  * Created by CIA-agency on 13/03/2016.
  */
-public class intro2 extends Activity {
+public class Intro2 extends Activity {
 
 
     @Override
@@ -22,7 +22,7 @@ public class intro2 extends Activity {
 
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(intro2.this,intro3.class);
+                Intent intent = new Intent(Intro2.this,Intro3.class);
                 startActivity(intent);
             }
         });

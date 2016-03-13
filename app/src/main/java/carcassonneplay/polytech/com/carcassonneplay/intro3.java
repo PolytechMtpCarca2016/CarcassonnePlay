@@ -9,7 +9,7 @@ import android.widget.Button;
 /**
  * Created by CIA-agency on 13/03/2016.
  */
-public class intro3 extends Activity {
+public class Intro3 extends Activity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

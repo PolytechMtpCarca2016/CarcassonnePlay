@@ -46,7 +46,7 @@ public final class Constants {
      */
     public static final long GEOFENCE_EXPIRATION_IN_MILLISECONDS =
             GEOFENCE_EXPIRATION_IN_HOURS * 60 * 60 * 1000;
-    public static final float GEOFENCE_RADIUS_IN_METERS = 100; // 1 mile, 1.6 km
+    public static final float GEOFENCE_RADIUS_IN_METERS = 30000; // 1 mile, 1.6 km
 
     public static final HashMap<String, LatLng> BAY_AREA_LANDMARKS = new HashMap<String, LatLng>();
     static {

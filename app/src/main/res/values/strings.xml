@@ -1,10 +1,13 @@
 <resources>
     <string name="app_name">CarcassonnePlay</string>
+    <string name="enigme">Enigme</string>
+    <string name="historical">historical</string>
     <string name="intro">intro</string>
     <string name="intro2">intro2</string>
     <string name="intro3">intro3</string>
-    <string name="menu_quete">menu_quete</string>
-    <string name="menu_enigme">menu_enigme</string>
+    <string name="missions">missions</string>
+    <string name="profil">profil</string>
+    <string name="quete">Quête</string>
         <!-- Buttons strings -->
         <string name="add_geofences">Add geofences</string>
         <string name="remove_geofences">Remove geofences</string>

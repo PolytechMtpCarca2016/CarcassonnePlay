@@ -118,11 +118,21 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+        mMap.getUiSettings().setMapToolbarEnabled(false);
+        mMap.getUiSettings().setCompassEnabled(true);
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(43.2065, 2.36309051), 16));
 
         // Add a marker in the castle and move the camera
-        LatLng castle = new LatLng(43.209168, 2.366554);
-        mMap.addMarker(new MarkerOptions().position(castle).title("Marqueurchateau"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(castle));
+        LatLng castle = new LatLng(43.2072481,2.36309051);
+        mMap.addMarker(new MarkerOptions().position(castle).title("Chateau Comtal"));
+        LatLng basilique = new LatLng(43.20538,2.36263);
+        mMap.addMarker(new MarkerOptions().position(basilique).title("Basilique St Nazaire"));
+        LatLng porte = new LatLng(43.20676,2.36567);
+        mMap.addMarker(new MarkerOptions().position(porte).title("Porte Narbonnaise"));
+        LatLng place = new LatLng(43.20657,2.36483);
+        mMap.addMarker(new MarkerOptions().position(place).title("Place Marcou"));
+        LatLng puits = new LatLng(43.20744,2.36424);
+        mMap.addMarker(new MarkerOptions().position(puits).title("Grand Puits"));
     }
 
     /**

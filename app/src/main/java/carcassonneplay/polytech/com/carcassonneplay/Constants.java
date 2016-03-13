@@ -46,7 +46,7 @@ public final class Constants {
      */
     public static final long GEOFENCE_EXPIRATION_IN_MILLISECONDS =
             GEOFENCE_EXPIRATION_IN_HOURS * 60 * 60 * 1000;
-    public static final float GEOFENCE_RADIUS_IN_METERS = 10000; // 1 mile, 1.6 km
+    public static final float GEOFENCE_RADIUS_IN_METERS = 50; // 1 mile, 1.6 km
 
     public static final HashMap<String, LatLng> BAY_AREA_LANDMARKS = new HashMap<String, LatLng>();
     static {
@@ -56,7 +56,13 @@ public final class Constants {
         // Basilique St Nazaire
         BAY_AREA_LANDMARKS.put("Basilique St Nazaire", new LatLng(43.20538,2.36263));
 
-        // Basilique St Nazaire
-        BAY_AREA_LANDMARKS.put("BABOUIN", new LatLng(43.209168, 2.366554));
+        // Porte Narbonnaise
+        BAY_AREA_LANDMARKS.put("Porte Narbonnaise", new LatLng(43.20676,2.36567));
+
+        // Grand Puits
+        BAY_AREA_LANDMARKS.put("Place Marcou", new LatLng(43.20657,2.36483));
+
+        // Grand Puits
+        BAY_AREA_LANDMARKS.put("Porte Narbonnaise", new LatLng(43.20744,2.36424));
     }
 }
